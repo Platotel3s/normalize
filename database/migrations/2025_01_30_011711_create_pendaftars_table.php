@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('asal_instansi');
             $table->string('nama_pendaftar');
-            $table->enum('jenis_kelamin',['laki-laki','perempuan']);
+            $table->enum('jenis_kelamin',['Pria','Wanita']);
             $table->string('angkatan');
             $table->string('jurusan');
             $table->integer('semester');

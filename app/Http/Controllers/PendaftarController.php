@@ -38,15 +38,7 @@ class PendaftarController extends Controller
             'semester'=>'required|integer',
             'alasan'=>'required|string|max:255',
         ]); 
-        Pendaftar::create($request->only([
-            'asal_instansi',
-            'nama_pendaftar',
-            'jenis_kelamin',
-            'angkatan',
-            'jurusan',
-            'semester',
-            'alasan',
-        ])); // Baris ini berfungsi memasukkan inputan dari variabel $request ke database. 
+        Pendaftar::create($request->all()); // Baris ini berfungsi memasukkan inputan dari variabel $request ke database. 
         return redirect()->route('data.index')->with('success','berhasil input peserta'); // Baris ini berfungsi untuk mengarahkan aplikasi ke loby setelah berhasil memasukkan data ke database. 
     }
 

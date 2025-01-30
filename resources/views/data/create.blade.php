@@ -25,7 +25,7 @@
         <label for="jk">Jenis kelamin</label>
         <select name="jenis_kelamin" id="jk">
             <option value="Pria">Pria</option>
-            <option value="wanita">Wanita</option>
+            <option value="Wanita">Wanita</option>
         </select>
 
         <label for="angkatan">Angkatan</label>
@@ -36,6 +36,9 @@
 
         <label for="semester">semester</label>
         <input type="number" name="semester" id="semester">
+
+        <label for="alasan">Alasan mengikuti kegiatan</label>
+        <input type="text" name="alasan" id="alasan">
 
         <button type="submit">Tambah</button>
         <button type="reset">Reset</button>
