@@ -28,7 +28,7 @@
             <table>
                 @if (session('success'))
                     <div class="notifikasi">
-                        <i class="fas fa-check"></i> Berhasil
+                        <i class="fas fa-check"></i> {{ session('success') }}
                     </div>
                 @endif
                 <thead>
