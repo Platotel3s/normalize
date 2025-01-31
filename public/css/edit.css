@@ -26,3 +26,31 @@ h3 {
     width: 40%;
     z-index: -10;
 }
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+    color: black;
+    padding: 0 20px;
+    margin-bottom: 1cm;
+    margin-top: 20px;
+}
+.sub-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff6600;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+a:hover {
+    background-color: #e55e00;
+}

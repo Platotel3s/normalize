@@ -19,6 +19,19 @@ body {
     display: inline-block;
     margin-bottom: 20px;
 }
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+}
+.sub-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+}
 
 .data-peserta {
     margin-top: 20px;

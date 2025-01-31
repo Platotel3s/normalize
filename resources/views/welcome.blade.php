@@ -9,16 +9,18 @@
 </head>
 <body>
     <div class="container mt-4">
-        <h1 class="header">Forum Ubuntu Indonesia</h1>
+        <nav>
+            <h1 class="header">Forum Ubuntu Indonesia</h1>
         
-        <div class="d-flex justify-content-end mb-3">
-            <a href="{{ route('data.index') }}">
-                <button class="btn btn-custom me-2">Data Peserta</button>
-            </a>
-            <a href="{{ route('data.create') }}">
-                <button class="btn btn-custom">Tambah Peserta</button>
-            </a>
-        </div>
+            <div class="d-flex justify-content-end mb-3">
+                <a href="{{ route('data.index') }}">
+                    <button class="btn btn-custom me-2">Data Peserta</button>
+                </a>
+                <a href="{{ route('data.create') }}">
+                    <button class="btn btn-custom">Tambah Peserta</button>
+                </a>
+            </div>
+        </nav>
         
         <div class="row">
             <div class="col-md-6 position-relative">

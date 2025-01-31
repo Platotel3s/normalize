@@ -6,12 +6,22 @@
     <title>Edit Data Peserta</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('css/edit.css') }}">
+    <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">
 </head>
 <body>
-
-    <div class="container">
-        <img src="{{ asset('gambar/logo_ubuntu.png') }}" alt="Logo ubuntu" class="ubuntu-logo">
+    <img src="{{ asset('gambar/logo_ubuntu.png') }}" alt="Logo ubuntu" class="ubuntu-logo">
+    <nav>
         <h3>Edit Data Peserta</h3>
+        <div class="sub-nav">
+            <a href="{{ route('data.index') }}">
+                <i class="fas fa-list"></i> Data Keanggotaan
+            </a>
+            <a href="{{ route('welcome') }}">
+                <i class="fas fa-home"></i> Beranda
+            </a>
+        </div>
+    </nav>
+    <div class="container">
         <form action="{{ route('data.update',$pendaftar->id) }}" method="POST">
             @csrf
             @method('PUT')

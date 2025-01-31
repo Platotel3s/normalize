@@ -7,16 +7,28 @@
     <title>Loby Utama</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">
+    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> --}}
+
 </head>
 <body>
     <div class="container">
         <img src="{{ asset('gambar/logo_ubuntu.png') }}" alt="" class="ubuntu-logo">
-        <h1>Data Peserta Kegiatan</h1>
+        <nav>
+            <h1>Data Peserta Kegiatan</h1>
+            <div class="sub-nav">
+                <a href="{{ route('welcome') }}">
+                    <i class="fas fa-home"></i> Beranda
+                </a>
+                <a href="{{ route('data.create') }}">
+                    <i class="fas fa-user-plus"></i> Tambah Peserta
+                </a>
+            </div>
+        </nav>
         <div class="data-peserta">
             <table>
                 @if (session('success'))
                     <div class="notifikasi">
-                        <i class="fas fa-check"></i>
+                        <i class="fas fa-check"></i> Berhasil
                     </div>
                 @endif
                 <thead>
@@ -56,9 +68,7 @@
         {{ $pendaftar->links() }}
 
         <br>
-        <a href="{{ route('data.create') }}">
-            <i class="fas fa-user-plus"></i> Tambah Peserta
-        </a>
+        
     </div>
 </body>
 </html>

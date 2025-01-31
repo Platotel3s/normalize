@@ -1,5 +1,18 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 body {
     background-color: #f4f4f4;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 1cm;
+}
+nav a{
+    display: inline;
 }
 .header {
     text-align: center;
