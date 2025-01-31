@@ -1,0 +1,31 @@
+body {
+    background-color: #f4f4f4;
+}
+.header {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.ubuntu-logo {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.2;
+    width: 100%;
+}
+.btn-custom {
+    background-color: #e95420;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+.btn-custom:hover {
+    background-color: #c24116;
+}
+button a{
+    text-decoration: none;
+    color: black;
+}

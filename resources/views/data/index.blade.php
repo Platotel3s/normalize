@@ -1,61 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Loby utama</title>
+    <title>Loby Utama</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">
 </head>
 <body>
-    <div class="notifikasi">
+    <div class="container">
+        <img src="{{ asset('gambar/logo_ubuntu.png') }}" alt="" class="ubuntu-logo">
+        <h1>Data Peserta Kegiatan</h1>
+
         @if (session('success'))
-            <i class="fas fa-check"></i>
-            <span>Berhasil</span>
+            <div class="notifikasi">
+                <i class="fas fa-check"></i> Berhasil
+            </div>
         @endif
-    </div>
 
-    <a href="{{ route('data.create') }}">
-        <i class="fas fa-add"></i>
-    </a>
-    {{ $pendaftar->links() }}
-    <div class="data-peserta">
-        <table>
-             <thead>
-                <tr>
-                    <th>Asal instansi</th>
-                    <th>Nama peserta</th>
-                    <th>Gender</th>
-                    <th>Alasan mengikuti kegiatan</th>
-                    <th>Aksi</th>
-                </tr>
-             </thead>
-             <tbody>
-                @foreach ($pendaftar as $pendaftars)
+        <div class="data-peserta">
+            <table>
+                <thead>
                     <tr>
-                        <td>{{ $pendaftars->asal_instansi }}</td>
-                        <td>{{ $pendaftars->nama_pendaftar }}</td>
-                        <td>{{ $pendaftars->jenis_kelamin }}</td>
-                        <td>{{ $pendaftars->alasan }}</td>
-                        <td>
-                            <a href="{{ route('data.edit',$pendaftars->id) }}">
-                                <i class="fas fa-edit"></i>
-                            </a>
-                            <form action="{{ route('data.delete',$pendaftars->id) }}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                            </form>
-                        </td>
+                        <th>Asal Instansi</th>
+                        <th>Nama Peserta</th>
+                        <th>Gender</th>
+                        <th>Alasan Mengikuti Kegiatan</th>
+                        <th>Aksi</th>
                     </tr>
-                @endforeach
-             </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @foreach ($pendaftar as $pendaftars)
+                        <tr>
+                            <td>{{ $pendaftars->asal_instansi }}</td>
+                            <td>{{ $pendaftars->nama_pendaftar }}</td>
+                            <td>{{ $pendaftars->jenis_kelamin }}</td>
+                            <td>{{ $pendaftars->alasan }}</td>
+                            <td class="action-buttons">
+                                <a href="{{ route('data.edit',$pendaftars->id) }}" class="edit-btn">
+                                    <i class="fas fa-edit"></i> Edit
+                                </a>
+                                <form action="{{ route('data.delete',$pendaftars->id) }}" method="POST" style="display:inline;">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="delete-btn">
+                                        <i class="fas fa-trash"></i> Hapus
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+
+        {{ $pendaftar->links() }}
+
+        <br>
+        <a href="{{ route('data.create') }}">
+            <i class="fas fa-user-plus"></i> Tambah Peserta
+        </a>
     </div>
-
-
 </body>
 </html>
