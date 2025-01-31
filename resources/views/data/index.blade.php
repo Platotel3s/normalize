@@ -12,15 +12,13 @@
     <div class="container">
         <img src="{{ asset('gambar/logo_ubuntu.png') }}" alt="" class="ubuntu-logo">
         <h1>Data Peserta Kegiatan</h1>
-
-        @if (session('success'))
-            <div class="notifikasi">
-                <i class="fas fa-check"></i> Berhasil
-            </div>
-        @endif
-
         <div class="data-peserta">
             <table>
+                @if (session('success'))
+                    <div class="notifikasi">
+                        <i class="fas fa-check"></i>
+                    </div>
+                @endif
                 <thead>
                     <tr>
                         <th>Asal Instansi</th>
