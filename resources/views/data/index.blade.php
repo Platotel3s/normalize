@@ -31,6 +31,7 @@
                     <th>Jurusan</th>
                     <th>Semester</th>
                     <th>Alasan mengikuti kegiatan</th>
+                    <th>Aksi</th>
                 </tr>
              </thead>
              <tbody>
@@ -43,6 +44,18 @@
                         <td>{{ $pendaftars->jurusan }}</td>
                         <td>{{ $pendaftars->semester }}</td>
                         <td>{{ $pendaftars->alasan }}</td>
+                        <td>
+                            <a href="{{ route('data.edit',$pendaftars->id) }}">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <form action="{{ route('data.delete',$pendaftars->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
              </tbody>
