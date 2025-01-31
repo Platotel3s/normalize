@@ -28,15 +28,6 @@
             <option value="Wanita">Wanita</option>
         </select>
 
-        <label for="angkatan">Angkatan</label>
-        <input type="text" name="angkatan" id="angkatan">
-
-        <label for="jurusan">jurusan</label>
-        <input type="text" name="jurusan" id="jurusan">
-
-        <label for="semester">semester</label>
-        <input type="number" name="semester" id="semester">
-
         <label for="alasan">Alasan mengikuti kegiatan</label>
         <input type="text" name="alasan" id="alasan">
 

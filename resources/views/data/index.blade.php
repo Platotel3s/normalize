@@ -27,9 +27,6 @@
                     <th>Asal instansi</th>
                     <th>Nama peserta</th>
                     <th>Gender</th>
-                    <th>Angkatan</th>
-                    <th>Jurusan</th>
-                    <th>Semester</th>
                     <th>Alasan mengikuti kegiatan</th>
                     <th>Aksi</th>
                 </tr>
@@ -40,9 +37,6 @@
                         <td>{{ $pendaftars->asal_instansi }}</td>
                         <td>{{ $pendaftars->nama_pendaftar }}</td>
                         <td>{{ $pendaftars->jenis_kelamin }}</td>
-                        <td>{{ $pendaftars->angkatan }}</td>
-                        <td>{{ $pendaftars->jurusan }}</td>
-                        <td>{{ $pendaftars->semester }}</td>
                         <td>{{ $pendaftars->alasan }}</td>
                         <td>
                             <a href="{{ route('data.edit',$pendaftars->id) }}">

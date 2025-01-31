@@ -33,9 +33,6 @@ class PendaftarController extends Controller
             'asal_instansi'=>'required|string|max:255', // required artinya wajib terisi.
             'nama_pendaftar'=>'required|string|max:255',
             'jenis_kelamin'=>'required|in:Pria,Wanita',
-            'angkatan'=>'required|string',
-            'jurusan'=>'required|string',
-            'semester'=>'required|integer',
             'alasan'=>'required|string|max:255',
         ]); 
         Pendaftar::create($request->all()); // Baris ini berfungsi memasukkan inputan dari variabel $request ke database. 
@@ -71,9 +68,6 @@ class PendaftarController extends Controller
             'asal_instansi'=>'required|string|max:255', // required artinya wajib diisi.
             'nama_pendaftar'=>'required|string|max:255',
             'jenis_kelamin'=>'required',
-            'angkatan'=>'required|string',
-            'jurusan'=>'required|string',
-            'semester'=>'required|integer',
             'alasan'=>'required|string|max:255',
         ]);
         $pendaftar=Pendaftar::findOrFail($id);

@@ -11,9 +11,6 @@ class Pendaftar extends Model
         'asal_instansi',
         'nama_pendaftar',
         'jenis_kelamin',
-        'angkatan',
-        'jurusan',
-        'semester',
         'alasan'
     ];
 }

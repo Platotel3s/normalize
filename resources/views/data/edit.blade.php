@@ -7,9 +7,10 @@
     <title>Edit Data Peserta</title>
 </head>
 <body>
-    <form action="" method="POST">
+    <form action="{{ route('data.update',$pendaftar->id) }}" method="POST">
         @csrf
         @method('PUT')
+        <h3>Halaman edit data</h3>
         <label for="instansi">Asal instansi</label>
         <input type="text" name="asal_instansi" id="instansi" value="{{ $pendaftar->asal_instansi }}">
 
@@ -18,21 +19,14 @@
 
         <label for="jk">Jenis kelamin</label>
         <select name="jenis_kelamin" id="jk">
-            <option value="Pria">Pria</option>
-            <option value="Wanita">Wanita</option>
+            <option value="Pria" {{ $pendaftar->jenis_kelamin == 'Pria' ? 'selected' : '' }}>Pria</option>
+            <option value="Wanita" {{ $pendaftar->jenis_kelamin == 'Wanita' ? 'selected' : '' }}>Wanita</option>
         </select>
-
-        <label for="angkatan">Angkatan</label>
-        <input type="text" name="angkatan" id="angkatan" value="{{ $pendaftar->angkatan }}">
-
-        <label for="jurusan">jurusan</label>
-        <input type="text" name="jurusan" id="jurusan" value="{{ $pendaftar->jurusan }}">
-
-        <label for="semester">semester</label>
-        <input type="number" name="semester" id="semester" value="{{ $pendaftar->semester }}">
 
         <label for="alasan">Alasan mengikuti kegiatan</label>
         <input type="text" name="alasan" id="alasan" value="{{ $pendaftar->alasan }}">
+
+        <button type="submit">Simpan Perubahan</button>
     </form>
 </body>
 </html>

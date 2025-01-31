@@ -16,9 +16,6 @@ return new class extends Migration
             $table->string('asal_instansi');
             $table->string('nama_pendaftar');
             $table->enum('jenis_kelamin',['Pria','Wanita']);
-            $table->string('angkatan');
-            $table->string('jurusan');
-            $table->integer('semester');
             $table->string('alasan');
             $table->timestamps();
         });
